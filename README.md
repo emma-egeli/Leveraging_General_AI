@@ -1,4 +1,4 @@
-### Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Verifying User-Inputted Text 
+### Leveraging General-Purpose AI Tools for Use in Specialized Tasks: Verifying User-Inputted Text 
 
 #### Overview
 The goal of this Capstone is to show how general-purpose AI tools can be utilized in specialized tasks. 
@@ -15,7 +15,7 @@ Compared to many specialized AI tools, general-purpose AI stools are significant
 
 ### Are all general-purpose AI tools made the same? 
 
-#### Methodology 
+#### Program Design Methodology 
 
 #### Results
 
