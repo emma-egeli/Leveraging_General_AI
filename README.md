@@ -8,7 +8,8 @@ This program was made in Python with the assistance of Google Gemini's chatbot a
 #### Program Design and API Methodology
 The API was given the following instructions in its code:
 ```python
-system_instruction = """
+system_instruction =
+"""
 YOUR ROLE:
 You are an objective, professional fact-checking analyst.
 YOUR TASKS:
