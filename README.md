@@ -62,6 +62,30 @@ In summary, while cats cannot see the full spectrum of colors that humans do, th
 3. **Encyclopædia Britannica:** *Can Cats See Color?*
    (https://www.britannica.com/story/can-cats-see-color)
 ```
+User Input:
+```
+Dogs are naturally purple.
+```
+Program Output:
+```
+============================================================
+VERIFICATION RESULT
+============================================================
+**VERDICT:** FALSE / DEBUNKED
+
+### **EXPLANATION**
+Dogs are not naturally purple. The coat colors of domestic dogs are determined entirely by two base pigments: **eumelanin** (which produces black, brown, gray, or dark brown tones) and **pheomelanin** (which produces red, yellow, orange, gold, or cream tones). 
+
+Genetic variations, dilutions, and combinations of these two pigments account for all naturally occurring coat patterns and colors in dogs. There is no biological mechanism or pigment present in canines that generates purple fur. Any dog with purple fur has been artificially dyed.
+
+*Note: This statement appears to be an absurd claim or potential AI hallucination.*
+
+### **SOURCES**
+1. **UC Davis Veterinary Genetics Laboratory** – "Dog Coat Color Genetics"
+   *https://vgl.ucdavis.edu/services/dog-coat-color-genetics*
+2. **Wikipedia** – "Dog coat"
+   *https://en.wikipedia.org/wiki/Dog_coat*
+```
 ### Conclusions
 
 ### User Guide
