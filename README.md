@@ -130,4 +130,7 @@ This program successfully utilizes Gemini in making a simple fact checker by giv
 1. Install program files.
 2. Create and a activate a Python environment for the program files.
 3. Install the necessary packages.
-4. Obtain a Google Gemini API key and insert it into the program.
+```bash
+pip install -r requirements.txt --break-system-packages
+```
+5. Obtain a Google Gemini API key and insert it into the program.
