@@ -127,9 +127,9 @@ This program successfully utilizes Gemini in making a simple fact checker by giv
 
 ### User Guide
 ---
-1. Install program files.
-2. Create and a activate a Python environment for the program files.
-3. Install the necessary packages.
+1. Install GitHub files. 
+2. Create and activate a Python environment for the program files.
+3. Install the necessary packages from the requirements.txt file.
 ```bash
 pip install -r requirements.txt --break-system-packages
 ```
