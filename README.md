@@ -1,13 +1,15 @@
-### Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Verifying User-Inputted Text 
+## Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Verifying User-Inputted Text 
 
 **Last Modified:** September 15th, 2026
 
-#### Overview
-The goal of this Capstone is to explore how widely accessible general-purpose AI tools (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. This specific case example is a program that uses Google Gemini as a simple "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
+### Overview
+---
+The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. These models are largely accessible to general public and can easily be adapted for special uses through effective system instructions and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, producing more comprehensive results, and improve overall usability. 
 
-This program was made in Python with the assistance of Google Gemini's chatbot and coding agent in Antigravity IDE.
+This specific case example is a program that uses Google Gemini as a simple "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
 
-#### Program Design and API Methodology
+### Program Design and API Methodology
+---
 The API was given the following instructions in its code:
 ```python
 system_instruction =
@@ -31,7 +33,8 @@ For quick facts, Wikipedia is acceptable. Do NOT use any social media websites a
 4. Limit the number of websources you pull information from when retunring your response to the user. Do not use more than three sources. 
 """
 ```
-#### Example Outputs
+### Example Outputs
+---
 User Input:
 ```
 Cats are colorblind.
@@ -119,9 +122,11 @@ La afirmación es totalmente correcta. Los pulpos poseen una anatomía y un sist
 3. **National Geographic:** [*Octopus Profile and Physiology*](https://www.nationalgeographic.com) — Documenta las adaptaciones biológicas de los cefalópodos.
 ```
 ### Conclusions
+---
 This program successfully utilizes Gemini in making a simple fact checker by giving it a list of rules and requirements it must follow. One important thing to note is that this program has case-handling in place where the program will still successfully run in the event that there are no tokens on the API key. Another thing to note is that this program is also able to handle non-English text and will automatically return its verdict in language it detects in the user input, which makes it a flexible option. 
 
 ### User Guide
+---
 1. Install program files.
 2. Create and a activate a Python environment for the program files.
 3. Install the necessary packages.
