@@ -3,7 +3,7 @@
 **Last Modified:** September 15th, 2026
 
 #### Overview
-The goal of this Capstone is to explore how general-purpose AI tools (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be utilized in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. This specific case example is a program that uses Google Gemini as a simple "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not is true) with an in-depth explanation for its verdict with sources. 
+The goal of this Capstone is to explore how widely accessible general-purpose AI tools (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. This specific case example is a program that uses Google Gemini as a simple "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
 
 This program was made in Python with the assistance of Google Gemini's chatbot and coding agent in Antigravity IDE.
 
