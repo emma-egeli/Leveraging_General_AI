@@ -1,7 +1,9 @@
 ### Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Verifying User-Inputted Text 
 
+**Last Modified:** September 15th, 2026
+
 #### Overview
-The goal of this Capstone is to explore how general-purpose AI tools can be utilized in specific tasks, compared to specialized AI-tools that are trained specifically in those tasks. This specific program is powered by Google Gemini API and acts as a "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, returns a verdict on the validity of the inputted text (whether or not is true), and gives an explanation to back up its verdict with online sources. 
+The goal of this Capstone is to explore how general-purpose AI tools (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be utilized in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. This specific case example is a program that uses Google Gemini as a simple "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not is true) with an in-depth explanation for its verdict with sources. 
 
 This program was made in Python with the assistance of Google Gemini's chatbot and coding agent in Antigravity IDE.
 
@@ -86,8 +88,41 @@ Genetic variations, dilutions, and combinations of these two pigments account fo
 2. **Wikipedia** – "Dog coat"
    *https://en.wikipedia.org/wiki/Dog_coat*
 ```
+User Input:
+```
+Los pulpos tienen tres corazones y su sangre es de color azul.
+```
+Program Output: 
+```
+============================================================
+VERIFICATION RESULT
+============================================================
+**VERDICTO:** VERIFICADO / VERDADERO
+
+---
+
+### **Explicación:**
+La afirmación es totalmente correcta. Los pulpos poseen una anatomía y un sistema circulatorio con las siguientes características:        
+
+1. **Tres corazones:**
+   * Dos de los corazones (corazones branquiales) se encargan exclusivamente de bombear la sangre desoxigenada a través de las branquias para que recoja oxígeno.
+   * El tercer corazón (corazón sistémico) circula la sangre oxigenada por el resto de los órganos y tejidos del cuerpo.
+
+2. **Sangre de color azul:**
+   * La sangre de los pulpos es azul debido a la presencia de la **hemocianina**, una proteína rica en cobre que se une al oxígeno para transportarlo a través del organismo. Esto contrasta con la sangre humana y de la mayoría de los vertebrados, que es roja porque utiliza **hemoglobina**, una proteína rica en hierro. La hemocianina es especialmente eficiente para transportar oxígeno en ambientes marinos fríos y con bajas concentraciones de oxígeno.
+
+---
+
+### **Fuentes:**
+1. **Natural History Museum (Londres):** [*Why do octopuses have three hearts and blue blood?*](https://www.nhm.ac.uk) — Detalla la estructura anatómica del sistema circulatorio de los cefalópodos y la función de la hemocianina.
+2. **Smithsonian Ocean:** [*Octopus and Squid - Ocean Portal*](https://ocean.si.edu) — Explica la fisiología del pulpo, incluyendo sus tres corazones y las propiedades químicas de su sangre azul.
+3. **National Geographic:** [*Octopus Profile and Physiology*](https://www.nationalgeographic.com) — Documenta las adaptaciones biológicas de los cefalópodos.
+```
 ### Conclusions
+This program successfully utilizes Gemini in making a simple fact checker by giving it a list of rules and requirements it must follow. One important thing to note is that this program has case-handling in place where the program will still successfully run in the event that there are no tokens on the API key. Another thing to note is that this program is also able to handle non-English text and will automatically return its verdict in language it detects in the user input, which makes it a flexible option. 
 
 ### User Guide
-
-
+1. Install program files.
+2. Create and a activate a Python environment for the program files.
+3. Install the necessary packages.
+4. Obtain a Google Gemini API key and insert it into the program.
