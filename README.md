@@ -4,13 +4,13 @@
 
 ### Overview
 ---
-The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. These models are largely accessible to general public and can easily be adapted for special uses through effective system instructions and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, producing more comprehensive results, and improve overall usability. 
+The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized tools that are trained more linearly and specifically in certain tasks. These models are largely accessible to general public and can be easily adapted for special uses through effective system instructions, hardcoded restraints, and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, produce more comprehensive results, adapt to newer data, as well as enhance overall system usability. 
 
-This specific example is a program that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
+This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
 
 ### Program Design
 ---
-The API was given the following instructions in its code:
+Google Gemini was given the following instructions in the program so it had clear guideline on the role, tasks, and requirements it needed to fulfill. 
 ```python
 system_instruction =
 """
@@ -125,7 +125,7 @@ La afirmación es totalmente correcta. Los pulpos poseen una anatomía y un sist
 ```
 ### Conclusions
 ---
-This program successfully utilizes Gemini in making a simple fact checker by giving it a list of rules and requirements it must follow. One important thing to note is that this program has case-handling in place where the program will still successfully run in the event that there are no tokens on the API key. Another thing to note is that this program is also able to handle non-English text and will automatically return its verdict in language it detects in the user input, which makes it a flexible option. 
+This program successfully utilizes Gemini in making a simple fact checker tool through. One important thing to note is that this program has case-handling in place where the program will still successfully run in the event that there are no tokens on the API key. Another thing to note is that this program is also able to handle non-English text and will automatically return its verdict in language it detects in the user input, which makes it a flexible option. 
 
 ### User Guide
 ---
@@ -136,3 +136,4 @@ This program successfully utilizes Gemini in making a simple fact checker by giv
 pip install -r requirements.txt --break-system-packages
 ```
 5. Obtain a Google Gemini API key and insert it into the program.
+### Additional Resources
