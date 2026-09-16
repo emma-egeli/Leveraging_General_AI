@@ -6,9 +6,9 @@
 ---
 The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized AI-based tools that are trained more linearly and specifically in certain tasks. These models are largely accessible to general public and can easily be adapted for special uses through effective system instructions and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, producing more comprehensive results, and improve overall usability. 
 
-This specific case example is a program that uses Google Gemini as a simple "content verification" tool in which the user, after being prompted by the program, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
+This specific example is a program that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
 
-### Program Design and API Methodology
+### Program Design
 ---
 The API was given the following instructions in its code:
 ```python
@@ -33,13 +33,15 @@ For quick facts, Wikipedia is acceptable. Do NOT use any social media websites a
 4. Limit the number of websources you pull information from when retunring your response to the user. Do not use more than three sources. 
 """
 ```
+### Output Explanations
+
 ### Example Outputs
 ---
-User Input:
+**User Input**
 ```
 Cats are colorblind.
 ```
-Program Output:
+**Program Output**
 ```
 ============================================================
 VERIFICATION RESULT
@@ -67,11 +69,11 @@ In summary, while cats cannot see the full spectrum of colors that humans do, th
 3. **Encyclopædia Britannica:** *Can Cats See Color?*
    (https://www.britannica.com/story/can-cats-see-color)
 ```
-User Input:
+**User Input**
 ```
 Dogs are naturally purple.
 ```
-Program Output:
+**Program Output**
 ```
 ============================================================
 VERIFICATION RESULT
@@ -91,11 +93,11 @@ Genetic variations, dilutions, and combinations of these two pigments account fo
 2. **Wikipedia** – "Dog coat"
    *https://en.wikipedia.org/wiki/Dog_coat*
 ```
-User Input:
+**User Input**
 ```
 Los pulpos tienen tres corazones y su sangre es de color azul.
 ```
-Program Output: 
+**Program Output**
 ```
 ============================================================
 VERIFICATION RESULT
