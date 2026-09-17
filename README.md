@@ -1,5 +1,5 @@
 ## Assessing the Usability of General-Purpose AI Tools for Specialized Tasks
-### Using Google Gemini to Categorize User-Inputted Text 
+### Using Google Gemini to Assess and Categorize the Verifiability User-InputtedText 
 
 **Last Modified:** September 17th, 2026
 
@@ -9,9 +9,10 @@ The goal of this capstone is to explore how general-purpose AI models (specifica
 
 This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on if the inputted statement is categorized as being "TRUE", "FALSE", "PARTIALLY TRUE", or "UNVERIFIABLE" based on the available reliable evidence. The output will also include an explanation for the verdict reached with information from available online sources if applicable. 
 
-### Development
+### Program Development
 ---
-Google Gemini was given the following instructions in the program so it had clear guideline on the role, tasks, and requirements it needed to fulfill. 
+This program was developed using Python and integrates Google Gemini API to assess and evaluate user-inputted text, which was adapted for this task through clear system instructions describing its role and requirements it must follow. 
+
 ```python
 system_instruction =
 """
