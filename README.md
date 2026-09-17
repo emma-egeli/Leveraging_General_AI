@@ -1,14 +1,15 @@
-## Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Categorizing User-Inputted Text Based on Content Verification 
+## Assessing the Usability of General-Purpose AI Tools for Specialized Tasks
+### Using Google Gemini to Categorize User-Inputted Text 
 
-**Last Modified:** September 15th, 2026
+**Last Modified:** September 17th, 2026
 
 ### Overview
 ---
-The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized tools that are trained more linearly and specifically for similar tasks. General-purpose AI models are largely accessible to general public and can be easily adapted for special uses through effective system instructions, hardcoded restraints, and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, produce more comprehensive results, adapt to newer data, as well as enhance overall system usability. 
+The goal of this capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be adapted for specific tasks and assess their performance in comparison to tools that are trained specifically for an equivalent task. General-purpose AI models are largely accessible to the general public and can be adapted to specific tasks through techniques such as system instructions, output constraints, tool integration, and supplemental external data. 
 
-This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on if the inputted statement is categorized as being "TRUE", "FALSE", "PARTIALLY TRUE", or "UNVERIFIABLE". This verdict is reached based on the available reliable evidence. The output will also include an explanation for the verdict reached with information from available online sources if applicable. 
+This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on if the inputted statement is categorized as being "TRUE", "FALSE", "PARTIALLY TRUE", or "UNVERIFIABLE" based on the available reliable evidence. The output will also include an explanation for the verdict reached with information from available online sources if applicable. 
 
-### Program Design
+### Development
 ---
 Google Gemini was given the following instructions in the program so it had clear guideline on the role, tasks, and requirements it needed to fulfill. 
 ```python
@@ -33,6 +34,7 @@ For quick facts, Wikipedia is acceptable. Do NOT use any social media websites a
 4. Limit the number of websources you pull information from when retunring your response to the user. Do not use more than three sources. 
 """
 ```
+
 ### Output Categories 
 ---
 | Verdict | Definition |
@@ -130,9 +132,16 @@ La afirmación es totalmente correcta. Los pulpos poseen una anatomía y un sist
 2. **Smithsonian Ocean:** [*Octopus and Squid - Ocean Portal*](https://ocean.si.edu) — Explica la fisiología del pulpo, incluyendo sus tres corazones y las propiedades químicas de su sangre azul.
 3. **National Geographic:** [*Octopus Profile and Physiology*](https://www.nationalgeographic.com) — Documenta las adaptaciones biológicas de los cefalópodos.
 ```
+### Limitations and Issues
+---
+**Source Hallucination** 
+Although most of the other content is accurate, many of the sources that Gemini provided for supporting its explanations were found to not actually exist. This indicates that clear system instructions will not entirely mitigate AI hallucinations and additional steps must be taken to reduce the potential for the AI to hallucinate. This is something that needs to be taken into account when using these AI tools for specialized-use cases. 
+
 ### Conclusions
 ---
-This program demonstrates the potential of general-purpose AI tools in more specialized tasks. 
+This project demonstrates how general-purpose AI tools can be adapted for specialized tasks through clear system instructions that define the role, requirements, and constraints the AI is required to follow. 
+
+As demonstrated in the program outputs, these tools are able to flexibly adapt to different user inputs which enhances its usability. But they are also prone to generating hallucinations. 
 
 ### User Guide
 ---
@@ -140,7 +149,7 @@ This program demonstrates the potential of general-purpose AI tools in more spec
 2. Create and activate a Python environment for the program files.
 3. Install the necessary packages from the requirements.txt file.
 ```bash
-pip install -r requirements.txt --break-system-packages
+pip install -r requirements.txt
 ```
 5. Obtain a Google Gemini API key and insert it into the program.
 ### Additional Resources
