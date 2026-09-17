@@ -1,4 +1,4 @@
-## Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Verifying User-Inputted Text 
+## Leveraging General-Purpose AI Tools for Use in Specialized Tasks // Categorizing User-Inputted Text Based on Content Verification 
 
 **Last Modified:** September 15th, 2026
 
@@ -6,7 +6,7 @@
 ---
 The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized tools that are trained more linearly and specifically for similar tasks. General-purpose AI models are largely accessible to general public and can be easily adapted for special uses through effective system instructions, hardcoded restraints, and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, produce more comprehensive results, adapt to newer data, as well as enhance overall system usability. 
 
-This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the on if that inputted statement can be supported or debunked based on available evidence. It gives an explanation for its conclusion with information from available online sources if applicable. 
+This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on if the inputted statement is categorized as being "TRUE", "FALSE", "PARTIALLY TRUE", or "UNVERIFIABLE". This verdict is reached based on the available reliable evidence. The output will also include an explanation for the verdict reached with information from available online sources if applicable. 
 
 ### Program Design
 ---
