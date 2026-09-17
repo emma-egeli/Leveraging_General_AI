@@ -4,9 +4,9 @@
 
 ### Overview
 ---
-The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized tools that are trained more linearly and specifically in certain tasks. These models are largely accessible to general public and can be easily adapted for special uses through effective system instructions, hardcoded restraints, and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, produce more comprehensive results, adapt to newer data, as well as enhance overall system usability. 
+The goal of this Capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be made useful in specific tasks and assess their performance in comparison to specialized tools that are trained more linearly and specifically for similar tasks. General-purpose AI models are largely accessible to general public and can be easily adapted for special uses through effective system instructions, hardcoded restraints, and supplemental external data. In addition, the language-processing capabilities of these AI models can also give them some flexibility in task-handling which can help handle unexpected inputs, produce more comprehensive results, adapt to newer data, as well as enhance overall system usability. 
 
-This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the validity of the inputted text (whether or not it is true) with an in-depth explanation for its verdict with sources. 
+This program is a case example that uses Google Gemini in a simple "content verification" tool in which the user, after being prompted by the console output, types or pastes text into the console for analysis. The program processes the user input, initiates a web search, and returns a verdict on the on if that inputted statement can be supported or debunked based on available evidence. It gives an explanation for its conclusion with information from available online sources if applicable. 
 
 ### Program Design
 ---
@@ -33,7 +33,14 @@ For quick facts, Wikipedia is acceptable. Do NOT use any social media websites a
 4. Limit the number of websources you pull information from when retunring your response to the user. Do not use more than three sources. 
 """
 ```
-### Output Explanations
+### Output Categories 
+---
+| Verdict | Definition |
+|---|---|
+| **VERIFIED / TRUE** | The inputted statement is true and can be debunked with reliable evidence. |
+| **FALSE / DEBUNKED** | The inputted statement is false and can be debunked with reliable evidence. |
+| **PARTIALLY TRUE / MISLEADING** | The inputted statement contains some factual element but omits important context, exaggerates the evidence, or has a combination of true and false elements. |
+| **UNVERIFIABLE** | Invalid user inputs or there is insufficient reliable information to establish whether the inputted statement is true or false. |
 
 ### Example Outputs
 ---
@@ -125,7 +132,7 @@ La afirmación es totalmente correcta. Los pulpos poseen una anatomía y un sist
 ```
 ### Conclusions
 ---
-This program successfully utilizes Gemini in making a simple fact checker tool through. One important thing to note is that this program has case-handling in place where the program will still successfully run in the event that there are no tokens on the API key. Another thing to note is that this program is also able to handle non-English text and will automatically return its verdict in language it detects in the user input, which makes it a flexible option. 
+This program demonstrates the potential of general-purpose AI tools in more specialized tasks. 
 
 ### User Guide
 ---
