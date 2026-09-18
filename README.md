@@ -6,7 +6,7 @@
 ---
 The goal of this capstone is to explore how general-purpose AI models (specifically LLMs such as ChatGPT, Copilot, Gemini, and Claude) can be adapted for specific tasks and assess their performance in comparison to tools that are built specifically for an equivalent task. General-purpose AI models are largely accessible to the general public and can be adapted to specific tasks through techniques such as system instructions, output constraints, tool integration, and supplemental external data. 
 
-This program is a case example that uses Google Gemini in a simple "content verification" tool where the user, after being prompted by the console output, inputs text into the console for analysis. The program processes this user input and then checks it against the contents of manually approved sources listed in an external JSON file, then returns a verdict based on if the inputted text can be verified through those sources with an explanation citing the relevant sources if appliable. This program is not to assess the objective truth of a user-inputted statement, but the verifiability of the statement using only approved sources. 
+This program is a case example that uses Google Gemini in a simple "content verification" tool where the user, after being prompted by the console output, inputs text into the console for analysis. The program processes this user input and then checks it against the contents of manually approved sources listed in an external JSON file, then returns a verdict based on if the inputted text can be verified through those sources with an explanation citing the relevant sources if appliable. This program is not to assess the objective truth of a user-inputted statement, but the verifiability of the statement using only approved sources. If an objectively true statement is inputted into the console that is not relevant to any of the external sources, then that statement will be returned as being unverifiable. 
 
 ### Program Development
 ---
@@ -30,7 +30,11 @@ In the event the API is disconnected, the statement is checked by indexing throu
 
 ### Conclusions
 ---
-This project demonstrates how general-purpose AI tools can be adapted for specialized tasks through closed data access and clear system instructions. 
+This project demonstrates how general-purpose AI tools can be adapted for specialized tasks through closed data access and clear system instructions, which create a controlled environment for the LLM to operate under while still being semantically flexible. 
+
+The offline mode helps demonstrates the difference between traditional information retrieval and LLM-assisted retrieval.
+
+Since this programs operates as a tool that determines the verifiability of statements based on a controlled pool of sources, it can be useful in research and academic writing. 
 
 ### User Guide
 ---
