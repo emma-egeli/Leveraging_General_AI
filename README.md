@@ -10,23 +10,17 @@ This program is a case example that uses Google Gemini in a simple "content veri
 
 ### Program Development
 ---
-**System Instructions**
+**System Instructions:**
 This program was developed using Python and integrates Google Gemini API to assess and evaluate user-inputted text, which was adapted for this task through clear system instructions describing its role and requirements it must follow.
 
-**Closed-Source Searching**
+**Closed-Source Searching:**
 To reduce source and content hallucinations, the AI is restricted to only using manually selected sources in an external JSON file. 
 
-**Offline Mode**
+**Offline Mode:**
 In the event the API is disconnected, the statement is checked by indexing through cached web content to search for key words from the user inputted text. 
 
 ### Output Categories 
 ---
-| Verdict | Definition |
-|---|---|
-| **VERIFIED / TRUE** | The inputted statement is true and can be debunked with reliable evidence. |
-| **FALSE / DEBUNKED** | The inputted statement is false and can be debunked with reliable evidence. |
-| **PARTIALLY TRUE / MISLEADING** | The inputted statement contains some factual element but omits important context, exaggerates the evidence, or has a combination of true and false elements. |
-| **UNVERIFIABLE** | Invalid user inputs or there is insufficient reliable information to establish whether the inputted statement is true or false. |
 
 ### Example Outputs
 ---
