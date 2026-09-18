@@ -1,5 +1,4 @@
-## Assessing the Usability of General-Purpose AI Tools for Specialized Tasks
-### Using Google Gemini to Assess and Categorize the Verifiability User-InputtedText 
+## Assessing the Usability of General-Purpose AI Tools for Specialized Tasks  Using Google Gemini to Assess and Categorize User-Inputted Text Based on Verifilability
 
 **Last Modified:** September 17th, 2026
 
