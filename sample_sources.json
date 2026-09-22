@@ -1,0 +1,26 @@
+[
+  {
+    "id": "SRC-001",
+    "title": "NASA Global Climate Change - Vital Signs of the Planet",
+    "url": "https://climate.nasa.gov/vital-signs/global-temperature/",
+    "domain": "climate.nasa.gov",
+    "category": "Science & Environment",
+    "summary": "Earth's global average surface temperature in 2023 was the warmest on record since modern recordkeeping began in 1880. Human activities, primarily greenhouse gas emissions, drive current global warming trends."
+  },
+  {
+    "id": "SRC-002",
+    "title": "Wikipedia - Cat",
+    "url": "https://en.wikipedia.org/wiki/Cat",
+    "domain": "en.wikipedia.org",
+    "category": "General Knowledge",
+    "summary": "Cat, domestic feline (Felis catus), has been associated with humans for at least 9,500 years. Despite being classified as carnivores, they are opportunistic feeders and consume a wide range of prey, including rodents, birds, and insects."
+  },
+  {
+    "id": "SRC-003",
+    "title": "Wikipedia - Dog",
+    "url": "https://en.wikipedia.org/wiki/Dog",
+    "domain": "en.wikipedia.org",
+    "category": "General Knowledge",
+    "summary": "The dog (Canis familiaris or Canis lupus familiaris) is a domesticated mammal that evolved from the wolf. It is widely regarded as one of humanity's earliest domesticated animals and has been selectively bred for millennia to exhibit a vast range of traits, including size, coat color, temperament, and working abilities. Dogs play diverse roles in human society, serving as companions, working dogs, service animals, and assistance animals."
+  }
+]
