@@ -161,9 +161,6 @@ RULES:
 Now await the user's statement and apply the format above precisely.
 ```
 
-**Closed-Source Grounding:**
-To reduce the potential for AI hallucinations, the LLM is restricted by system prompt to use *only* content from documents explicitly loaded by the user. The system prompt prohibits drawing on training data, external knowledge, or inference beyond what the documents state.
-
 ---
 
 ### Conclusions
@@ -173,48 +170,6 @@ This project demonstrates how general-purpose AI tools can be adapted for specia
 Since this program operates as a tool that determines the *verifiability* of statements based on a controlled pool of sources rather than objective truth, it can be useful in research, academic writing, and fact-checking workflows where the authoritative source is explicitly defined.
 
 ---
-
-### User Guide
-
-1. **Clone or download** the repository files.
-
-2. **Create and activate a Python virtual environment:**
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate   # Windows
-   source venv/bin/activate  # macOS / Linux
-   ```
-
-3. **Install required packages:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   Minimum required: `requests`, `pypdf`
-   Optional: `python-docx` (for `.docx` file support)
-
-4. **Obtain an ARC VT API key** from https://ondemand.arc.vt.edu (requires a Virginia Tech account with ARC access).
-
-5. **Create a `.env` file** in the project directory with your key:
-   ```
-   ARC_API_KEY=sk-your-key-here
-   ```
-   Optionally, override the default model:
-   ```
-   ARC_MODEL=gpt-oss-120b
-   ```
-
-6. **Run the program:**
-   ```bash
-   python main_openai.py
-   ```
-
-7. **Load a document**, then start querying:
-   ```
-   add https://en.wikipedia.org/wiki/Cat
-   add C:/path/to/your/document.pdf
-   verify Cats are obligate carnivores.
-   verifymode
-   ```
 
 **Available commands:**
 
