@@ -722,6 +722,5 @@ def main():
             if len(history) > 40:
                 history = history[-40:]
 
-
 if __name__ == "__main__":
     main()
