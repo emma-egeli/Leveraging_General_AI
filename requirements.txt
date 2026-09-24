@@ -1,1 +1,14 @@
-google-genai>=2.23.0
+# ---------------------------------------------------------------
+# Install with:  pip install -r requirements.txt
+# ---------------------------------------------------------------
+
+# HTTP requests (used for fetching URLs and calling the API)
+# Falls back to stdlib urllib if not installed, but requests is recommended
+requests>=2.34.2
+
+# PDF text extraction (required to load .pdf files)
+# PyPDF2 is accepted as a fallback but pypdf is preferred
+pypdf>=6.19.0
+
+# DOCX text extraction (optional – only needed for .docx file support)
+python-docx>=1.1.0
