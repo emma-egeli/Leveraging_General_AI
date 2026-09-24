@@ -236,6 +236,3 @@ Since this program operates as a tool that determines the *verifiability* of sta
 ### Additional Resources
 
 - [ARC VT Research Computing](https://arc.vt.edu)
-- [ARC VT LLM API](https://llm-api.arc.vt.edu)
-- [pypdf Documentation](https://pypdf.readthedocs.io)
-- [python-docx Documentation](https://python-docx.readthedocs.io)
