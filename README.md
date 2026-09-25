@@ -18,23 +18,23 @@ This program uses the **ARC VT LLM API** as a simple **content verification** an
 ### Features
 
 **Document Loading**
-The user can load content from:
-- **Local files** — PDF, TXT, DOCX, MD, HTML, and other plain-text formats
-- **Web URLs** — web pages or remotely hosted PDFs are fetched and extracted at runtime
 
-**Document Caching**
-All loaded document content is extracted and stored locally in `openai_doc_cache.json`. Previously loaded documents are remembered across sessions, so the same file or URL does not need to be re-fetched each time the program is run.
+This program supports content loaded from: 
+- **Local Files** — TXT, DOCX, MD, HTML, and other plain-text formats.
+- **Web URLs** — Web pages or remotely hosted PDFs.
 
-**Session Persistence**
-The set of *active* documents (those currently loaded into the LLM context) is saved to `openai_session.json` and automatically restored on the next launch. Documents that were active when the program was last closed will be active again on startup without any manual reactivation.
+To load content onto the program, the user simply needs to enter `add {url or path/to/text_file}` into the console while the program is running. The content is extracted and stored into a JSON located in the program folder. 
 
-**Strict Closed-Source Grounding**
-The LLM is restricted by system instruction to answer **only** using information explicitly stated in the loaded documents. It may not draw on its training data, general knowledge, or any external sources. If the documents do not contain relevant information, the LLM is required to say so rather than speculate.
+**Document Storage**
+
+All loaded document and URL content is extracted and stored locally. This content is **not forgotten** after the program is stopped, allowing those same files to be used for future sessions without reupload. 
 
 **Q&A**
+
 The default mode. The user can ask any question and the LLM will respond using only the content of the currently active documents, citing the source document by name.
 
 **Content Verification**
+
 Activated with the `verifymode` command (or as a one-shot with `verify <statement>`). In this mode, each user input is treated as a statement to evaluate. The LLM returns a structured verdict:
 
 ```
@@ -113,8 +113,13 @@ EXPLANATION: While the document mentions cats were introduced to Corsica and
 
 ### Program Development
 
-**System Instructions:**
-This program was developed in Python and integrates the ARC VT LLM API (an OpenAI-compatible endpoint) to assess and evaluate user-inputted text. The LLM is adapted for this task through explicit system instructions describing its role, the strict rules it must follow, and the exact output format it must produce.
+**Overview** 
+
+This program was developed in Python and integrates the ARC VT LLM API (an OpenAI-compatible endpoint) to assess and evaluate user-inputted text against locally extracted PDF and URL content.
+
+**System Instructions**
+
+The LLM is adapted for this task through explicit system instructions describing its role, the strict rules it must follow, and the exact output format it must produce.
 
 ```
 You are a document-grounding assistant.
@@ -160,6 +165,10 @@ RULES:
 === END OF DOCUMENTS ===
 Now await the user's statement and apply the format above precisely.
 ```
+
+**Strict Closed-Source Grounding**
+
+The LLM is restricted by system instruction to answer **only** using information explicitly stated in the loaded documents. It may not draw on its training data, general knowledge, or any external sources. If the documents do not contain information relevant to the user-input, the LLM is required to say so rather than speculate.
 
 ---
 
