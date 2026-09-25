@@ -1,6 +1,6 @@
 ## Using LLMs to Assess and Categorize User-Inputted Text Based on Verifiability in Closed-Source Grounding
 
-**Last Modified:** September 24th, 2026
+**Last Modified:** September 25th, 2026
 
 ---
 
@@ -62,6 +62,21 @@ Each verdict also includes a **CONFIDENCE** level (HIGH, MEDIUM, or LOW) reflect
 ---
 
 ### Example Outputs
+
+#### Q&A
+
+**Example 1 - From Uploaded PDF**
+```
+You: who is the head footbal coach at virginia tech?
+
+  [Thinking...]
+--------------------------------------------------------------
+ Assistant (3.1s):
+
+James Franklin is the head football coach at Virginia Tech. 【virginia_tech.pdf】
+--------------------------------------------------------------
+```
+#### Content Verification
 
 **Example 1 — VERIFIED**
 ```
